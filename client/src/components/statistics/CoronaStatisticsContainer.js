@@ -154,12 +154,6 @@ class CoronaStatisticsContainer extends Component {
                   thousandSeparator={true}
                 />&nbsp;confirmed cases are being recorded since then.
               </p>
-              <p className={'covid-desc-txt'}>
-                To get up to date results, this website collects the data from&nbsp;<a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" rel="noopener noreferrer" className={'covid-desc-link-txt'}>Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).</a>
-              </p>
-              <p className={'covid-desc-txt'}>
-                If you want to know more about the development of this website then visit <a href="https://hackbotone.com/blog/covid-19-full-stack-application" target="_blank" rel="noopener noreferrer" className={'covid-desc-link-txt'}>Coronavirus (COVID-19) - Full Stack Application.</a>
-              </p>
             </div>
             <div className={'covid-date-container'}>
               <span className={'covid-timeline-label'}>Last Updated:</span>
@@ -230,11 +224,6 @@ class CoronaStatisticsContainer extends Component {
   render() {
     return (
       <div className={'corona-parent-container'}>
-        <div className={'header-menu-container'}>
-          <a href="https://hackbotone.com/blog/covid-19-full-stack-application" target="_blank" rel="noopener noreferrer" className={'header-label'}>Blog</a>
-          <a href="https://github.com/anshumanpattnaik/covid19-full-stack-application" target="_blank" rel="noopener noreferrer" className={'header-label'}>Get the code</a>
-          <span className={'header-label'} onClick={this.onSetAboutModal.bind(this, true)}>About</span>
-        </div>
         {this.state.isAboutModal ?
           <div className={'about-parent-container'}>
             <div className={'about-overlay-container'} onClick={this.onSetAboutModal.bind(this, false)}></div>
@@ -254,17 +243,8 @@ class CoronaStatisticsContainer extends Component {
                     <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports" target="_blank" rel="noopener noreferrer" className={'about-modal-link'}>World Health Organization site.</a>
                 </p>
               </div>
-              <p className={'developer-info-label'}>Website Design & Developed by</p>
+              <p className={'developer-info-label'}>Website Design & Developed by Sujal Gera, Keshav Agrawal and Mishra Vaibhav Rajeev</p>
               <div className={'developer-info-container'}>
-                <div className={'developer-profile-container'}>
-                  <a href="https://hackbotone.com/about" target="_blank" rel="noopener noreferrer">
-                    <img src="https://assets.hackbotone.com/images/icons/anshuman_pattnaik.jpg" alt="Anshuman Pattnaik" className={'developer-profile-img'} />
-                  </a>
-                </div>
-                <div className={'developer-name-container'}>
-                  <a href="https://hackbotone.com/about" target="_blank" rel="noopener noreferrer" className={'developer-name'}>Anshuman Pattnaik</a>
-                  <a href="https://hackbotone.com/" target="_blank" rel="noopener noreferrer" className={'developer-website'}>www.hackbotone.com</a>
-                </div>
               </div>
             </div>
           </div>

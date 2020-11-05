@@ -37,7 +37,7 @@ cron.schedule('23 59 * * * *', async function () {
     var fileName = newdate + '.csv';
 
     //var formatted_date = "13 APR 2020";
-    //var fileName = "04-13-2020.csv";
+    // fileName = "10-21-2020.csv";
 
     const results = [];
     var data = [];
@@ -55,6 +55,8 @@ cron.schedule('23 59 * * * *', async function () {
                     .pipe(csv())
                     .on('data', (data) => results.push(data))
                     .on('end', () => {
+                        console.log(data);
+                        console.log(results);
                         if (results.length > 0) {
                             for (var i = 0; i < results.length; i++) {
                                 totalConfirmed = parseInt(results[i].Confirmed) + totalConfirmed;
